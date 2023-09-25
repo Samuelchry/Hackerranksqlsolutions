@@ -1,0 +1,31 @@
+Revising the Select Query I
+Problem: Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
+Code:select * from city where (population>100000 and countrycode='USA')
+
+Revising the Select Query II
+Problem: Query the NAME field for all American cities in the CITY table with populations larger than 120000. The CountryCode for America is USA.
+Code: select name from city where (population>120000 and countrycode='USA')
+
+Select All
+Problem: Query all columns (attributes) for every row in the CITY table.
+Code: select * from city
+
+Select by ID
+Problem: Query all columns for a city in CITY with the ID 1661.
+Code: 	select * from city where id=1661
+
+Japanese cities’ attributes
+Problem: Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+Code: select * from city where (countrycode = 'JPN')
+
+Japanese Cities’ Names
+Problem: Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.
+Code: select name from city where (countrycode='JPN')
+
+Weather Observation 1
+Problem: Query a list of CITY and STATE from the STATION table.
+Code: select city,state from station
+
+Weather Observation 3
+Problem: Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+Code: select distinct city from station where (mod (id,2)=0)
